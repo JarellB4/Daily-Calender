@@ -3,52 +3,87 @@ function currenttime() {
     }
     setInterval(currenttime, 500);
   
-   $("#9amButton").on("click",()=> {
+   $("#NAMButton").on("click",()=> {
         
       let textArea =  document.getElementById("B").value;
       let StringifytextArea = JSON.stringify(textArea)
       localStorage.setItem("textArea", StringifytextArea )
     })
 
-    $("#10amButton").on("click",()=> {
+    $("#AMButton").on("click",()=> {
         
         let textArea =  document.getElementById("A").value;
         let StringifytextArea = JSON.stringify(textArea)
         localStorage.setItem("textArea", StringifytextArea )
       })
 
-      $("#11amButton").on("click",()=> {
+      $("#EAMButton").on("click",()=> {
         
         let textArea =  document.getElementById("C").value;
         let StringifytextArea = JSON.stringify(textArea)
         localStorage.setItem("textArea", StringifytextArea )
       })
-      $("#12pmButton").on("click",()=> {
+      $("#TPMButton").on("click",()=> {
         
         let textArea =  document.getElementById("D").value;
         let StringifytextArea = JSON.stringify(textArea)
         localStorage.setItem("textArea", StringifytextArea )
       })
-      $("#1pmButton").on("click",()=> {
+      $("#OpmButton").on("click",()=> {
         
         let textArea =  document.getElementById("E").value;
         let StringifytextArea = JSON.stringify(textArea)
         localStorage.setItem("textArea", StringifytextArea )
       })
-
-// $(document).ready(function(){
-//     $(".button").on("click", function({
-//        //distinguish which save button was clicked by using window obj THIS  $(this)
-//        //grab value from our textarea
-
-//     //  $(this)
-//     })
-
-
-// })
-
-/* <div row id="9am">
-    <div col >9am</div>
-    <textarea col></textarea>
-    <buton col>save</buton>
-<div> */
+      function backgroundColorEdit(){
+        if (hourNow == currentTime){
+            document.getElementsById("B").style.backgroundColor = "#ff0000";
+        }else if (hourNow < currentTime){
+            document.getElementsById("B").style.backgroundColor = "#d3d3d3";
+        }else 
+        {
+            document.getElementsById("B").style.backgroundColor = "#90ee90";
+        }
+}
+function backgroundColorEdit(){
+    if (hourNow == currentTime){
+        document.getElementsById("A").style.backgroundColor = "#ff0000";
+    }else if (hourNow < currentTime){
+        document.getElementsById("A").style.backgroundColor = "#d3d3d3";
+    }else 
+    {
+        document.getElementsById("A").style.backgroundColor = "#90ee90";
+    
+    }
+}
+  
+function backgroundColorEdit(){
+    if (hourNow == currentTime){
+        document.getElementsById("C").style.backgroundColor = "#ff0000";
+    }else if (hourNow < currentTime){
+        document.getElementsById("C").style.backgroundColor = "#d3d3d3";
+    }else 
+    {
+        document.getElementsById("C").style.backgroundColor = "#90ee90";
+    }
+}
+function backgroundColorEdit(){
+    if (hourNow == currentTime){
+        document.getElementsById("D").style.backgroundColor = "#ff0000";
+    }else if (hourNow < currentTime){
+        document.getElementsById("D").style.backgroundColor = "#d3d3d3";
+    }else 
+    {
+        document.getElementsById("D").style.backgroundColor = "#90ee90";
+    }
+}
+function backgroundColorEdit(){
+    if (hourNow == currentTime){
+        document.getElementsById("E").style.backgroundColor = "#ff0000";
+    }else if (hourNow < currentTime){
+        document.getElementsById("E").style.backgroundColor = "#d3d3d3";
+    }else 
+    {
+        document.getElementsById("E").style.backgroundColor = "#90ee90";
+    }
+}
